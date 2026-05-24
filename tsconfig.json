@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@agent-platform/core": ["packages/agent-core/src/index.ts"],
+      "@agent-platform/governance": ["packages/governance/src/index.ts"],
+      "@agent-platform/rag": ["packages/rag/src/index.ts"],
+      "@agent-platform/tools": ["packages/tools/src/index.ts"]
+    }
+  },
+  "include": [
+    "apps/**/*.ts",
+    "packages/**/*.ts",
+    "tests/**/*.ts"
+  ]
+}
+
