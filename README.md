@@ -1,6 +1,6 @@
 # Agent Platform
 
-Production-shaped starter for enterprise Slack agents that combine RAG, tool calling, Jira automation, and governance logging.
+Production-shaped starter for enterprise Slack agents that combine RAG, tool calling, Jira automation, and governance logging. 
 
 ## What This MVP Does
 
