@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent Platform</title>
+<style>
+:root{--bg:#10120f;--panel:#171b15;--ink:#f5f1e8;--muted:#b8c2ad;--line:#30382b;--a:#9dd45a;--b:#6ab6ff;--c:#f0b35b}*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:Verdana,system-ui,sans-serif;background:radial-gradient(circle at 12% 10%,rgba(157,212,90,.24),transparent 28%),radial-gradient(circle at 82% 16%,rgba(106,182,255,.18),transparent 30%),linear-gradient(135deg,#10120f,#161b1f 58%,#18140f);color:var(--ink)}main{width:min(1120px,calc(100vw - 32px));margin:auto;padding:48px 0}.kicker{color:var(--a);font-weight:800;text-transform:uppercase;font-size:12px;letter-spacing:.12em}h1{font-size:clamp(42px,8vw,88px);line-height:.9;margin:0;letter-spacing:0}.lede{font-size:20px;line-height:1.55;color:#e5ebdc;max-width:760px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0}.btn{border:1px solid var(--line);border-radius:8px;padding:12px 16px;color:var(--ink);background:#202719;text-decoration:none;font-weight:800}.btn.primary{background:var(--a);color:#10180a}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}.card,.panel{border:1px solid var(--line);border-radius:8px;background:rgba(23,27,21,.82);padding:20px}.card h2,.panel h2{margin:0 0 10px;font-size:18px}.card p,.panel p{color:var(--muted);line-height:1.55}pre{white-space:pre-wrap;background:#0b0e0c;border:1px solid var(--line);border-radius:8px;padding:16px;color:#dff7c2;overflow:auto}.copy{margin-top:10px;border:1px solid var(--line);border-radius:8px;background:#26321f;color:var(--ink);padding:10px 12px;cursor:pointer}@media(max-width:760px){main{padding:28px 0}.grid{grid-template-columns:1fr}.lede{font-size:17px}}
+</style>
+</head>
+<body>
+<main>
+<p class="kicker">DaCameraGirl / agent-platform</p>
+<h1>Agent Platform</h1>
+<p class="lede">A production-shaped starter for enterprise Slack agents with retrieval, tool calling, Jira automation, confirmation gates, and governance logging.</p>
+<div class="actions"><a class="btn primary" href="https://github.com/DaCameraGirl/agent-platform">Open source</a><a class="btn" href="https://github.com/DaCameraGirl/agent-platform/tree/main/docs">Read docs</a></div>
+<section class="grid"><article class="card"><h2>Slack Agent</h2><p>Runs a Slack Bolt app in Socket Mode and supports app mentions, commands, direct messages, and local mock workflows.</p></article><article class="card"><h2>Governed Actions</h2><p>Drafts Jira work from Slack requests and requires explicit confirmation before creating an issue.</p></article><article class="card"><h2>Audit Trail</h2><p>Logs turns, retrieval decisions, tool calls, and correlation IDs so agent behavior can be reviewed later.</p></article></section>
+<section class="panel"><h2>Run Locally</h2><pre id="cmd">npm install
+npm run mock
+
+# Slack mode
+cp .env.example .env
+npm run dev:slack</pre><button class="copy" data-copy="cmd">Copy commands</button></section>
+</main>
+<script>document.querySelectorAll('[data-copy]').forEach(b=>b.onclick=()=>navigator.clipboard&&navigator.clipboard.writeText(document.getElementById(b.dataset.copy).textContent).then(()=>b.textContent='Copied'));</script>
+</body>
+</html>
